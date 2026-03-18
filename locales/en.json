@@ -1,0 +1,299 @@
+{
+  "nav": {
+    "home": "Home",
+    "fleet": "Fleet",
+    "about": "About",
+    "contact": "Contact",
+    "book": "Book Now",
+    "booking": "Booking"
+  },
+  "hero": {
+    "badge": "Premium Service",
+    "title": {
+      "part1": "Premium",
+      "part2": "Chauffeur Service"
+    },
+    "subtitle": "Exceptional comfort and impeccable service for your most important journeys",
+    "cta": {
+      "book": "Book Now",
+      "explore": "Send request"
+    },
+    "stats": {
+      "rating": "Rating",
+      "support": "Support",
+      "cars": "Cars"
+    },
+    "scroll": "Go to request form"
+  },
+  "fleet": {
+    "title": "Our Fleet",
+    "subtitle": "Choose a car for your next journey",
+    "filters": {
+      "all": "All",
+      "business": "Business Class",
+      "premium": "Premium",
+      "suv": "SUVs",
+      "sport": "Sports Cars"
+    },
+    "price_per_hour": "/hour",
+    "price_per_day": "/day",
+    "features": {
+      "seats": "seats",
+      "bags": "bags",
+      "transmission": "automatic",
+      "engine": "engine",
+      "year": "year"
+    },
+    "cta": {
+      "book": "Book Now",
+      "details": "Details"
+    },
+    "status": {
+      "available": "Available",
+      "booked": "Booked",
+      "unavailable": "Unavailable"
+    },
+    "loading": "Loading cars...",
+    "no_cars": "No cars found",
+    "error": "Loading error",
+    "details": "Details",
+    "noCarsTitle": "No cars yet",
+    "noCarsText": "We’ll add our fleet soon — check back later.",
+    "reviewsTitle": "Reviews",
+    "leaveReview": "Leave a review",
+    "yourName": "Your name",
+    "rating": "Rating",
+    "reviewText": "Review text",
+    "send": "Send",
+    "close": "Close",
+    "reviewsEmpty": "No reviews yet. Be the first!",
+    "reviewThanks": "Thanks! Your review was submitted.",
+    "reviewError": "Could not submit the review. Please try again later."
+  },
+  "about": {
+    "title": "Why LuxuryDrive?",
+    "description": "We provide exclusive premium cars with professional drivers. Our service is the perfect combination of luxury, comfort and reliability.",
+    "stats": {
+      "experience": "years of experience",
+      "clients": "satisfied clients",
+      "cars": "cars in fleet",
+      "rating": "average rating"
+    },
+    "features": {
+      "fleet": {
+        "title": "Modern Fleet",
+        "description": "Only new premium-class cars with full option packages"
+      },
+      "drivers": {
+        "title": "Professional Drivers",
+        "description": "Experienced drivers with impeccable reputation and city knowledge"
+      },
+      "availability": {
+        "title": "The cost of renting a car with a driver in Almaty",
+        "description": "Hourly rental of a car with a driver — from 7,000₸ per hour",
+        "description2": "— Transfer from Almaty airport — from 10,000₸",
+        "description3": "— Trips around the city and Almaty region — from 10,000₸",
+        "description4": "— Long-distance trips — calculated individually",
+        "description5": "The exact cost is calculated individually. Contact us for a free consultation and cost calculation."
+      },
+      "insurance": {
+        "title": "How to book a rental car with a driver in Almaty",
+        "description2": "Contact us via Telegram or WhatsApp, we will help you with the choice.",
+        "description3": "Please provide the date, route and type of vehicle.",
+        "description4": "We will pick up a car with a driver, agree on the price and confirm the order. Consultation and car selection is free of charge"
+      }
+    },
+    "seo": {
+      "headline": "AlmaDrive — car rentals and transfers in Almaty and across Kazakhstan",
+      "p1": "AlmaDrive provides car rental and transfer services for private clients, tourists, and corporate customers.",
+      "p2": "We operate in Almaty and across Kazakhstan, ensuring comfortable and reliable trips for any scenario.",
+      "bullets": {
+        "luxury": "Luxury interiors",
+        "drivers": "Professional drivers",
+        "fleet": "Exclusive fleet"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to travel? We will help you choose",
+    "form": {
+      "title": "Quick Application",
+      "name": "Your Name",
+      "phone": "Phone",
+      "message": "Message or questions",
+      "submit": "Submit Application"
+    },
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Working Hours",
+      "address": "Address"
+    },
+    "extra": {
+      "hoursText": "24/7, 7 days a week",
+      "addressLine": "Kazakhstan, Almaty",
+      "pickupNote": "(pickup/drop-off by arrangement)",
+      "messengersTitle": "WhatsApp / Telegram",
+      "reload": "Reload page",
+      "carsLoadError": "⚠️ Could not load cars. Please check your internet connection and reload the page."
+    }
+  },
+  "chat": {
+    "title": "Support",
+    "placeholder": "Type your message...",
+    "welcome": "Hello! How can I help you choose a car?",
+    "send": "Send"
+  },
+  "common": {
+    "close": "Close",
+    "loading": "Loading...",
+    "success": "Success!",
+    "error": "Error",
+    "back_to_top": "Back to top",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "mute_toggle": "Mute/unmute",
+    "pause_toggle": "Pause/play",
+    "open_chat": "Open chat",
+    "slow_load": "⚠️ Loading is taking longer than expected. Check your internet connection."
+  },
+  "footer": {
+    "description": "Premium chauffeur transfer service. Comfort and style in every trip.",
+    "sections": {
+      "fleet": "Fleet",
+      "services": "Services",
+      "company": "Company",
+      "booking": "Booking"
+    },
+    "services": {
+      "transfer": "Transfer",
+      "business": "Business Trips",
+      "wedding": "Wedding Cortege",
+      "excursions": "Excursions"
+    },
+    "company": {
+      "about": "About Us",
+      "contact": "Contacts",
+      "reviews": "Reviews",
+      "careers": "Careers"
+    },
+    "copyright": "© 2024 LuxuryDrive. All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "meta": {
+    "title": "Premium Transfer Almaty | AlmaDrive",
+    "description": "AlmaDrive — premium chauffeur transfer service in Almaty and across Kazakhstan. Comfort, safety, and punctuality.",
+    "keywords": "Almaty transfer, premium transfer, chauffeur service, Almaty airport transfer, business transfer"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Choose the trip format — we’ll adapt to your needs",
+    "items": {
+      "airport": {
+        "title": "Airport transfer",
+        "text": "We provide a comfortable transfer from and to the airport by business and premium class cars. The driver will meet you at the arrival area, help you with your luggage, and ensure a quick and safe trip to your destination. Punctuality, high level of service and convenience make every trip as comfortable as possible.",
+        "alt": "Transfer"
+      },
+      "hourly": {
+        "title": "Hourly chauffeured service",
+        "text": "We offer an hourly car rental service with a professional driver for business meetings, events and personal trips around the city. You get a comfortable business or premium class car and the opportunity to freely plan your route. Our driver will ensure a safe and timely trip so that you can focus on your business.",
+        "alt": "Hourly"
+      },
+      "intercity": {
+        "title": "Intercity trips across Kazakhstan",
+        "text": "We offer comfortable long-distance trips around Kazakhstan in business and premium class cars with professional drivers. Regardless of the distance, you will be able to travel safely and with maximum convenience. We provide timely pick-up of the car, a high level of service and flexible travel conditions for business and personal routes.",
+        "alt": "Intercity"
+      },
+      "events": {
+        "title": "Event transportation",
+        "text": "Transport for weddings, conferences, and events: on-time pickup, coordination, multiple cars.",
+        "alt": "Events"
+      },
+      "delegations": {
+        "title": "Delegation service",
+        "text": "We provide high-quality transportation of guests at events: conferences, business meetings, corporate events, car selection for the event status, flexible rental conditions",
+        "alt": "Delegations"
+      },
+      "tours": {
+        "title": "Tours and excursions",
+        "text": "We organize comfortable tourist trips and individual excursions to the picturesque places of Kazakhstan. Our business and premium class cars allow you to travel with maximum convenience, enjoying nature and the sights of the region. Professional drivers will help you plan your route and ensure a safe and enjoyable trip. You can visit nature parks, mountain locations, historical sites, and popular tourist destinations without worrying about roads and transportation.",
+        "alt": "Tourism"
+      }
+    },
+    "book": "Send request"
+  },
+  "serviceReviews": {
+    "title": "Service reviews",
+    "subtitle": "Real customer feedback — leave your review (published after moderation)",
+    "loading": "Loading reviews...",
+    "empty": "No reviews yet. Be the first!",
+    "anonymous": "Anonymous",
+    "loadError": "Failed to load reviews.",
+    "validation": "Please enter a review (min 2 characters).",
+    "sent": "✅ Thanks! Your review was sent for moderation.",
+    "sendError": "❌ Failed to send the review. Please try later.",
+    "form": {
+      "nameLabel": "Name (optional)",
+      "namePlaceholder": "Your name",
+      "ratingLabel": "Rating",
+      "textLabel": "Review",
+      "textPlaceholder": "A couple of words about the service...",
+      "submit": "Send"
+    }
+  },
+  "booking": {
+    "title": "Send a request",
+    "subtitle": "Choose the service, vehicle class, and suitable time — we will contact you to confirm.",
+    "summaryTitle": "What to specify",
+    "summaryItems": {
+      "service": "Service type",
+      "vehicleClass": "Vehicle class",
+      "date": "Date and time",
+      "contact": "Contact details",
+      "comment": "Comment with details"
+    },
+    "fields": {
+      "service": "Service type",
+      "vehicleClass": "Vehicle class",
+      "date": "Date and time",
+      "contact": "Contact details",
+      "comment": "Comment"
+    },
+    "placeholders": {
+      "service": "Select a service",
+      "vehicleClass": "Select vehicle class",
+      "contact": "+7 777 123 45 67",
+      "comment": "Specify address, route, passenger count, and any other details"
+    },
+    "submit": "Send request",
+    "messages": {
+      "loadError": "Could not load form data.",
+      "validation": "Please fill in all required fields.",
+      "success": "Your request has been sent. We will contact you soon.",
+      "error": "Could not send the request. Please try again later.",
+      "calcValidation": "Select a service and a vehicle class first.",
+      "calcSuccess": "Estimated price calculated.",
+      "calcError": "Could not calculate the price."
+    },
+    "summaryBadge": "Quick booking",
+    "summaryLead": "Fill in the form, calculate an estimated fare, and send your request in one flow.",
+    "formBadge": "AlmaDrive",
+    "formTitle": "Plan your ride in a minute",
+    "formIntro": "Choose your trip parameters, then calculate the estimated cost before submitting.",
+    "calculate": "Calculate price",
+    "preview": {
+      "service": "Service",
+      "vehicleClass": "Class",
+      "basePrice": "Base price"
+    },
+    "price": {
+      "label": "Estimated price",
+      "hint": "Choose a service and vehicle class, then press the calculate button.",
+      "disclaimer": "The estimate is approximate. Final cost depends on the route, waiting time, and extra conditions."
+    }
+  }
+}

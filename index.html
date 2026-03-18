@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AlmaDrive — премиальный трансфер с водителем в Алматы и по всему Казахстану">
+    <meta name="keywords" content="трансфер Алматы, премиальный трансфер, водитель, аэропорт Алматы, бизнес трансфер, аренда авто с водителем">
+    <meta name="author" content="AlmaDrive">
+    <title>Премиальный трансфер Алматы | AlmaDrive</title>
+    
+    <!-- ✅ ОПТИМИЗАЦИЯ: Локальные стили вместо CDN -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animation.css">
+    <link rel="stylesheet" href="styles/components/video-hero.css">
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/about.css">
+    <link rel="stylesheet" href="styles/components/services.css">
+    <link rel="stylesheet" href="styles/components/fleet.css">
+    <link rel="stylesheet" href="styles/components/chat.css">
+    <link rel="stylesheet" href="styles/components/contact.css">
+    <link rel="stylesheet" href="styles/components/service-reviews.css">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    
+    <!-- ✅ ИКОНКИ: Фавикон и манифест -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.json">
+    
+    <!-- ✅ Open Graph для соцсетей -->
+    <meta property="og:title" content="Премиальный трансфер Алматы | AlmaDrive">
+    <meta property="og:description" content="AlmaDrive — премиальный трансфер с водителем в Алматы и по всему Казахстану">
+    <meta property="og:image" content="/static/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxurydrive.ru">
+    
+    <!-- ✅ Тема браузера -->
+    <meta name="theme-color" content="#000000">
+    
+    <!-- ✅ Preload критичных ресурсов -->
+    <link rel="preload" href="js/api.js" as="script">
+    <link rel="preload" href="js/booking-form.js" as="script">
+    
+    <!-- ✅ Предзагрузка шрифтов (если есть) -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style"> -->
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="header" data-aos="fade-down">
+        <nav class="nav">
+            <div class="logo">
+                <span class="logo-icon">🚘</span>
+                <span class="logo-text">AlmaDrive</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links desktop-nav">
+                <a href="#home" class="nav-link" data-i18n="nav.home">Главная</a>
+                <a href="#booking" class="nav-link" data-i18n="nav.booking">Заявка</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">О нас</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a>
+            </div>
+            
+            <!-- Language Switcher (Desktop) -->
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+                <span class="lang-separator">|</span>
+                <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Открыть меню" data-i18n-aria-label="common.open_menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-header">
+                    <div class="logo">AlmaDrive</div>
+                    <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Закрыть меню" data-i18n-aria-label="common.close_menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6L6 18M6 6L18 18" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mobile-nav-links">
+                    <a href="#home" class="mobile-nav-link">
+                        <span data-i18n="nav.home">Главная</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#booking" class="mobile-nav-link">
+                        <span data-i18n="nav.booking">Заявка</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#about" class="mobile-nav-link">
+                        <span data-i18n="nav.about">О нас</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="mobile-nav-link">
+                        <span data-i18n="nav.contact">Контакты</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="mobile-language-switcher">
+                        <button class="lang-btn" data-lang="ru">RU</button>
+                        <span class="lang-separator">|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="mobile-nav-footer">
+                    <p>Premium Car Rental Service</p>
+                    <p class="mobile-copyright">© 2024 AlmaDrive</p>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-hidden="true"></div>
+
+            <!-- CTA Button (скрыт на мобильных) -->
+            <button class="cta-button primary desktop-book-btn" onclick="scrollToBooking()">
+                <span class="btn-text" data-i18n="hero.cta.explore">Отправить заявку</span>
+                <span class="btn-icon">→</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Video Background -->
+        <div class="video-hero-container">
+            <video class="luxury-car-video" autoplay muted loop playsinline preload="auto" 
+                   poster="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1920&h=1080&fit=crop">
+                <source src="/static/videos/mixkit-close-up-of-red-sports-car-63-hd-ready.mp4" type="video/mp4">
+                <source src="/static/videos/luxury-car.webm" type="video/webm">
+                <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1920&h=1080&fit=crop" 
+                     alt="Luxury Car" class="video-fallback" loading="lazy">
+            </video>
+            
+            <!-- Video Overlay -->
+            <div class="video-overlay">
+                <div class="gradient-overlay"></div>
+            </div>
+            
+            <!-- Video Controls -->
+            <div class="video-controls">
+                <button class="video-control-btn mute-btn" title="Включить/выключить звук" data-i18n-title="common.mute_toggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="video-control-btn pause-btn" title="Пауза/воспроизведение" data-i18n-title="common.pause_toggle">
+                    <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                    </svg>
+                    <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" style="display: none;">
+                        <rect x="6" y="4" width="4" height="16" fill="currentColor"/>
+                        <rect x="14" y="4" width="4" height="16" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content" data-aos="fade-up">
+            <div class="hero-badge" data-aos="fade-up" data-aos-delay="200">
+                <span data-i18n="hero.badge">Premium Class</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text" data-i18n="hero.title.part1">Премиальный</span>
+                <span data-i18n="hero.title.part2">трансфер в Алматы</span>
+            </h1>
+            
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+                Эксклюзивные автомобили с водителем. Комфорт, безопасность и стиль в каждой поездке
+            </p>
+            
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                <button class="cta-button primary" onclick="scrollToBooking()">
+                    <span class="btn-text" data-i18n="hero.cta.explore">Отправить заявку</span>
+                    <span class="btn-icon">→</span>
+                </button>
+                <button class="cta-button secondary" onclick="openContactForm()">
+                    <span class="btn-text" data-i18n="nav.contact">Консультация</span>
+                    <span class="btn-icon">💬</span>
+                </button>
+            </div>
+            
+            <!-- Stats -->
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat">
+                    <div class="stat-number">4.9</div>
+                    <div class="stat-label" data-i18n="hero.stats.rating">Рейтинг</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label" data-i18n="hero.stats.support">Поддержка</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label" data-i18n="hero.stats.cars">Автомобилей</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800" onclick="scrollToBooking()">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span data-i18n="hero.scroll">Перейти к форме заявки</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="services.title">Услуги</h2>
+                <p class="section-subtitle" data-i18n="services.subtitle">Выберите формат поездки — мы подстроимся под задачу</p>
+            </div>
+
+            <div class="services-accordion" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item" data-service="airport">
+                    <button class="service-trigger" type="button">
+                        <span class="service-title" data-i18n="services.items.airport.title">Трансфер из аэропорта / в аэропорт</span>
+                        <span class="service-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-panel">
+                        <div class="service-content">
+                            <div class="service-media">
+                                <img src="/static/photos_cars/5-good-reasons-to-use-a-limo-service-for-your-airport-transfers_pd40106w2440h1500rcrop_559.jpg" alt="Трансфер" data-i18n-alt="services.items.airport.alt" loading="lazy">
+                            </div>
+                            <div class="service-text">
+                                <p data-i18n="services.items.airport.text">Мы предоставляем комфортный трансфер из аэропорта и в аэропорт на автомобилях бизнес- и премиум-класса. Водитель встретит вас в зоне прилёта, поможет с багажом и обеспечит быструю и безопасную поездку до нужного места. Пунктуальность, высокий уровень сервиса и удобство делают каждую поездку максимально комфортной.</p>
+                                <div class="service-actions"><button class="cta-button primary service-book-btn" type="button" data-book-service="Трансфер из аэропорта" data-i18n="services.book">Отправить заявку</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-service="hourly">
+                    <button class="service-trigger" type="button">
+                        <span class="service-title" data-i18n="services.items.hourly.title">Почасовая аренда автомобиля с водителем</span>
+                        <span class="service-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-panel">
+                        <div class="service-content">
+                            <div class="service-media">
+                                <img src="/static/photos_cars/photo-1614091199036-e934784dbf0f.avif" alt="Почасовая аренда" data-i18n-alt="services.items.hourly.alt" loading="lazy">
+                            </div>
+                            <div class="service-text">
+                                <p data-i18n="services.items.hourly.text">Мы предлагаем услугу почасовой аренды автомобиля с профессиональным водителем для деловых встреч, мероприятий и личных поездок по городу. Вы получаете комфортный автомобиль бизнес- или премиум-класса и возможность свободно планировать свой маршрут. Наш водитель обеспечит безопасную и своевременную поездку, чтобы вы могли сосредоточиться на своих делах.</p>
+                                <div class="service-actions"><button class="cta-button primary service-book-btn" type="button" data-book-service="Почасовая аренда" data-i18n="services.book">Отправить заявку</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-service="intercity">
+                    <button class="service-trigger" type="button">
+                        <span class="service-title" data-i18n="services.items.intercity.title">Междугородние поездки по Казахстану</span>
+                        <span class="service-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-panel">
+                        <div class="service-content">
+                            <div class="service-media">
+                                <img src="/static/photos_cars/crypted39-sunset-7590155_1920.jpg" alt="Межгород" data-i18n-alt="services.items.intercity.alt" loading="lazy">
+                            </div>
+                            <div class="service-text">
+                                <p data-i18n="services.items.intercity.text">Поездки между городами и в регионы: комфортно, безопасно, с понятным планом маршрута и остановок.</p>
+                                <div class="service-actions"><button class="cta-button primary service-book-btn" type="button" data-book-service="Междугородние поездки" data-i18n="services.book">Отправить заявку</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-service="events">
+                    <button class="service-trigger" type="button">
+                        <span class="service-title" data-i18n="services.items.events.title">Транспортное обслуживание мероприятий</span>
+                        <span class="service-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-panel">
+                        <div class="service-content">
+                            <div class="service-media">
+                                <img src="/static/photos_cars/pexels-ron-lach-9520199.jpg" alt="Мероприятия" data-i18n-alt="services.items.events.alt" loading="lazy">
+                            </div>
+                            <div class="service-text">
+                                <p data-i18n="services.items.events.text">Мы обеспечиваем качественную перевозку гостей на мероприятиях: конференции, деловые встречи, корпоративные события, подбор автомобилей под статус мероприятия, гибкие условия аренды</p>
+                                <div class="service-actions"><button class="cta-button primary service-book-btn" type="button" data-book-service="Транспортное обслуживание мероприятий" data-i18n="services.book">Отправить заявку</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-service="delegations">
+                    <button class="service-trigger" type="button">
+                        <span class="service-title" data-i18n="services.items.delegations.title">Обслуживание делегаций</span>
+                        <span class="service-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-panel">
+                        <div class="service-content">
+                            <div class="service-media">
+                                <img src="/static/photos_cars/img1.webp" alt="Делегации" data-i18n-alt="services.items.delegations.alt" loading="lazy">
+                            </div>
+                            <div class="service-text">
+                                <p data-i18n="services.items.delegations.text">Мы предоставляем профессиональное транспортное обслуживание официальных и деловых делегаций. Наши водители обеспечивают высокий уровень сервиса, пунктуальность и конфиденциальность. Для гостей подбираются автомобили бизнес- и премиум-класса, соответствующие статусу мероприятия.</p>
+                                <div class="service-actions"><button class="cta-button primary service-book-btn" type="button" data-book-service="Обслуживание делегаций" data-i18n="services.book">Отправить заявку</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-service="tours">
+                    <button class="service-trigger" type="button">
+                        <span class="service-title" data-i18n="services.items.tours.title">Туристические поездки и экскурсии</span>
+                        <span class="service-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-panel">
+                        <div class="service-content">
+                            <div class="service-media">
+                                <img src="/static/photos_cars/thumbnail.jpeg" alt="Туризм" data-i18n-alt="services.items.tours.alt" loading="lazy">
+                            </div>
+                            <div class="service-text">
+                                <p data-i18n="services.items.tours.text">Мы организуем комфортные туристические поездки и индивидуальные экскурсии по живописным местам Казахстана. Наши автомобили бизнес- и премиум-класса позволяют путешествовать с максимальным удобством, наслаждаясь природой и достопримечательностями региона. Профессиональные водители помогут спланировать маршрут и обеспечат безопасную и приятную поездку. Вы можете посетить природные парки, горные локации, исторические места и популярные туристические направления, не беспокоясь о дороге и транспорте.</p>
+                                <div class="service-actions"><button class="cta-button primary service-book-btn" type="button" data-book-service="Туристические поездки" data-i18n="services.book">Отправить заявку</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="fleet booking-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="booking.title">Оставить заявку</h2>
+                <p class="section-subtitle" data-i18n="booking.subtitle">Выберите услугу, класс автомобиля и удобное время — мы свяжемся с вами для подтверждения.</p>
+            </div>
+
+            <div class="booking-layout" data-aos="fade-up" data-aos-delay="100">
+                <div class="booking-summary">
+                    <div class="booking-summary__card booking-summary__card--intro">
+                        <span class="booking-summary__eyebrow" data-i18n="booking.summaryBadge">Быстрый заказ</span>
+                        <h3 data-i18n="booking.summaryTitle">Что нужно указать</h3>
+                        <p class="booking-summary__lead" data-i18n="booking.summaryLead">Заполните форму, рассчитайте ориентировочную стоимость и отправьте заявку в один шаг.</p>
+                        <ul class="booking-summary__list">
+                            <li data-i18n="booking.summaryItems.service">Тип услуги</li>
+                            <li data-i18n="booking.summaryItems.vehicleClass">Класс автомобиля</li>
+                            <li data-i18n="booking.summaryItems.date">Дата и время поездки</li>
+                            <li data-i18n="booking.summaryItems.contact">Контакт для связи</li>
+                            <li data-i18n="booking.summaryItems.comment">Комментарий с деталями</li>
+                        </ul>
+                    </div>
+
+                    <div class="booking-summary__card booking-summary__card--info">
+                        <div class="booking-mini-stat">
+                            <span class="booking-mini-stat__label" data-i18n="booking.preview.service">Услуга</span>
+                            <strong id="bookingCurrentService">—</strong>
+                        </div>
+                        <div class="booking-mini-stat">
+                            <span class="booking-mini-stat__label" data-i18n="booking.preview.vehicleClass">Класс</span>
+                            <strong id="bookingCurrentClass">—</strong>
+                        </div>
+                        <div class="booking-mini-stat">
+                            <span class="booking-mini-stat__label" data-i18n="booking.preview.basePrice">Базовая цена</span>
+                            <strong id="bookingBasePrice">—</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="bookingForm" class="booking-form" novalidate>
+                    <div class="booking-form__glow" aria-hidden="true"></div>
+                    <div class="booking-form__header">
+                        <div>
+                            <span class="booking-form__eyebrow" data-i18n="booking.formBadge">AlmaDrive</span>
+                            <h3 class="booking-form__title" data-i18n="booking.formTitle">Подберите поездку за минуту</h3>
+                            <p class="booking-form__intro" data-i18n="booking.formIntro">Выберите параметры поездки, затем рассчитайте ориентировочную стоимость перед отправкой.</p>
+                        </div>
+                    </div>
+
+                    <div class="booking-form__grid">
+                        <label class="booking-form__field">
+                            <span data-i18n="booking.fields.service">Тип услуги</span>
+                            <select id="serviceSelect" name="service_id" required>
+                                <option value="" data-i18n="booking.placeholders.service">Выберите услугу</option>
+                            </select>
+                        </label>
+
+                        <label class="booking-form__field">
+                            <span data-i18n="booking.fields.vehicleClass">Класс автомобиля</span>
+                            <select id="vehicleClassSelect" name="vehicle_class_id" required>
+                                <option value="" data-i18n="booking.placeholders.vehicleClass">Выберите класс автомобиля</option>
+                            </select>
+                        </label>
+
+                        <label class="booking-form__field">
+                            <span data-i18n="booking.fields.date">Дата и время</span>
+                            <input id="serviceDate" name="service_date" type="datetime-local" required>
+                        </label>
+
+                        <label class="booking-form__field">
+                            <span data-i18n="booking.fields.contact">Контакт для связи</span>
+                            <input id="contactInput" name="contact" type="text" placeholder="+7 777 123 45 67" data-i18n-placeholder="booking.placeholders.contact" required>
+                        </label>
+                    </div>
+
+                    <label class="booking-form__field booking-form__field--full">
+                        <span data-i18n="booking.fields.comment">Комментарий</span>
+                        <textarea id="commentInput" name="comment" rows="5" placeholder="Уточните адрес, маршрут, количество пассажиров и другие детали" data-i18n-placeholder="booking.placeholders.comment"></textarea>
+                    </label>
+
+                    <input id="estimatedPriceInput" name="estimated_price" type="hidden">
+
+                    <div id="bookingPriceBox" class="booking-price-box" aria-live="polite">
+                        <div class="booking-price-box__label" data-i18n="booking.price.label">Примерная стоимость</div>
+                        <div id="bookingPriceValue" class="booking-price-box__value">—</div>
+                        <div id="bookingPriceMeta" class="booking-price-box__meta" data-i18n="booking.price.hint">Выберите услугу и класс автомобиля, затем нажмите кнопку расчёта.</div>
+                    </div>
+
+                    <div class="booking-form__actions">
+                        <button id="calculatePriceButton" class="cta-button secondary booking-form__calc-button" type="button" data-i18n="booking.calculate">Рассчитать стоимость</button>
+                        <button class="cta-button primary booking-form__submit-button" type="submit" data-i18n="booking.submit">Отправить заявку</button>
+                    </div>
+
+                    <p class="booking-form__hint" data-i18n="booking.price.disclaimer">Расчёт является ориентировочным. Точная цена зависит от маршрута, ожидания и дополнительных условий.</p>
+                    <div id="bookingFormMessage" class="booking-form__message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 class="section-title" data-i18n="about.seo.headline">AlmaDrive — аренда автомобилей и трансферы в Алматы и по всему Казахстану</h2>
+                    
+                    <p class="about-description">
+                        <span data-i18n="about.seo.p1">AlmaDrive предоставляет услуги аренды автомобилей и трансферов для частных клиентов, туристов и корпоративных заказчиков.</span>
+                        <span data-i18n="about.seo.p2">Мы работаем в Алматы и по всему Казахстану, обеспечивая комфортные и надёжные поездки для любых задач.</span>
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label" data-i18n="about.stats.experience">лет опыта</div>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label" data-i18n="about.stats.clients">довольных клиентов</div>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label" data-i18n="about.stats.cars">автомобилей</div>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="stat-number">4.9</div>
+                            <div class="stat-label" data-i18n="about.stats.rating">средний рейтинг</div>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="features-list">
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-icon">🚗</div>
+                            <div class="feature-content">
+                                <h4 data-i18n="about.features.fleet.title">Современный автопарк</h4>
+                                <p data-i18n="about.features.fleet.description">Только новые автомобили премиум-класса с полным пакетом опций</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon">👨‍✈️</div>
+                            <div class="feature-content">
+                                <h4 data-i18n="about.features.drivers.title">Профессиональные водители</h4>
+                                <p data-i18n="about.features.drivers.description">Опытные водители с безупречной репутацией и знанием города</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-icon">💸</div>
+                            <div class="feature-content">
+                                <h4 data-i18n="about.features.availability.title">Круглосуточная работа</h4>
+                                <p data-i18n="about.features.availability.description">— Почасовая аренда авто с водителем — от 6 000₸ в час</p>
+                                <p data-i18n="about.features.availability.description2">— Трансфер из аэропорта Алматы — от 10 000₸</p>
+                                <p data-i18n="about.features.availability.description3">— Поездки по городу и Алматинской области — от 10 000₸</p>
+                                <p data-i18n="about.features.availability.description4">— Междугородние поездки — рассчитываются индивидуально</p>
+                                <p data-i18n="about.features.availability.description5">Точная стоимость рассчитывается индивидуально. Свяжитесь с нами для бесплатной консультации и расчёта стоимости.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-icon">🛒</div>
+                            <div class="feature-content">
+                                <h4 data-i18n="about.features.insurance.title">Как заказать аренду авто с водителем в Алматы</h4>
+                                <p data-i18n="about.features.insurance.description2">Свяжитесь с нами, по telegram или whatsapp, мы поможем с выбором</p>
+                                <p data-i18n="about.features.insurance.description3">Сообщите дату, маршрут и тип автомобиля</p>
+                                <p data-i18n="about.features.insurance.description4">Мы подберём автомобиль с водителем, согласуем стоимость и подтвердим заказ. Консультация и подбор автомобиля — бесплатно.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="image-grid">
+                        <div class="image-item large">
+                            <img src="/static/images/About us porshe.jpg" 
+                                 alt="Premium car interior" loading="lazy" width="600" height="400">
+                            <div class="image-overlay">
+                                <span data-i18n="about.seo.bullets.luxury">Роскошные салоны</span>
+                            </div>
+                        </div>
+                        <div class="image-item small">
+                            <img src="/static/images/why-kei-8e2gal_GIE8-unsplash.jpg" 
+                                 alt="Professional driver" loading="lazy" width="300" height="200">
+                            <div class="image-overlay">
+                                <span data-i18n="about.seo.bullets.drivers">Профессиональные водители</span>
+                            </div>
+                        </div>
+                        <div class="image-item small">
+                            <img src="/static/images/About us.jpg" 
+                                 alt="Luxury car fleet" loading="lazy" width="300" height="200">
+                            <div class="image-overlay">
+                                <span data-i18n="about.seo.bullets.fleet">Эксклюзивный флот</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="contact.title">Контакты для бронирования</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Звоните для бронирования или вопросов 24/7</p>
+            </div>
+
+            <!-- Обновленный блок contact-info -->
+            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-info">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.info.hours">Часы работы</h4>
+                                <p data-i18n="contact.extra.hoursText">Круглосуточно, 7 дней в неделю</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.info.address">Адрес офиса</h4>
+                                <p data-i18n="contact.extra.addressLine">Казахстан, Алматы</p>
+                                <p class="contact-note" data-i18n="contact.extra.pickupNote">(подача/забор авто — по договоренности)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item highlight">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-details">
+                                <h4 data-i18n="contact.extra.messengersTitle">WhatsApp / Telegram</h4>
+                                <div class="messenger-links">
+                                    <a href="https://wa.me/77014803248" class="messenger-link whatsapp" target="_blank" rel="noopener">
+                                        WhatsApp: +7 701 480 3248
+                                    </a>
+                                    <a href="https://t.me/+77014803248" class="messenger-link telegram" target="_blank" rel="noopener">
+                                        Telegram: +7 701 480 3248
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Reviews Section -->
+    <section id="service-reviews" class="service-reviews">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="serviceReviews.title">Отзывы о сервисе</h2>
+                <p class="section-subtitle" data-i18n="serviceReviews.subtitle">Реальные впечатления клиентов — отправьте свой отзыв (публикация после модерации)</p>
+            </div>
+
+            <div class="service-reviews__grid" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <div id="serviceReviewsList" class="service-reviews__list">
+                        <p class="service-reviews__empty" data-i18n="serviceReviews.loading">Загрузка отзывов...</p>
+                    </div>
+                </div>
+
+                <div class="service-reviews__form">
+                    <form id="serviceReviewForm">
+                        <div class="service-reviews__row">
+                            <div>
+                                <label for="serviceReviewName" data-i18n="serviceReviews.form.nameLabel">Имя (необязательно)</label>
+                                <input id="serviceReviewName" type="text" placeholder="Ваше имя" data-i18n-placeholder="serviceReviews.form.namePlaceholder">
+                            </div>
+                            <div>
+                                <label for="serviceReviewRating" data-i18n="serviceReviews.form.ratingLabel">Оценка</label>
+                                <select id="serviceReviewRating">
+                                    <option value="5">5</option>
+                                    <option value="4">4</option>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="service-reviews__row">
+                            <div style="grid-column: 1 / -1;">
+                                <label for="serviceReviewText" data-i18n="serviceReviews.form.textLabel">Отзыв</label>
+                                <textarea id="serviceReviewText" required placeholder="Напишите пару слов о нашем сервисе..." data-i18n-placeholder="serviceReviews.form.textPlaceholder"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="service-reviews__actions">
+                            <button type="submit" class="btn btn-primary" data-i18n="serviceReviews.form.submit">Отправить</button>
+                        </div>
+                        <div id="serviceReviewMessage" class="service-reviews__message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🚘</span>
+                        <span class="logo-text">AlmaDrive</span>
+                    </div>
+                    <p class="footer-description" data-i18n="footer.description">
+                        Премиальный трансфер с водителем. Комфорт и стиль в каждой поездке.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram" rel="noopener">📷</a>
+                        <a href="#" class="social-link" aria-label="Telegram" rel="noopener">✈️</a>
+                        <a href="#" class="social-link" aria-label="WhatsApp" rel="noopener">💬</a>
+                        <a href="#" class="social-link" aria-label="VK" rel="noopener">👥</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.sections.booking">Заявка</h4>
+                        <a href="#booking" class="footer-link" data-i18n="booking.fields.service">Тип услуги</a>
+                        <a href="#booking" class="footer-link" data-i18n="booking.fields.vehicleClass">Класс автомобиля</a>
+                        <a href="#booking" class="footer-link" data-i18n="booking.fields.date">Дата и время</a>
+                        <a href="#booking" class="footer-link" data-i18n="booking.submit">Отправить заявку</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.sections.services">Услуги</h4>
+                        <a href="#" class="footer-link" data-i18n="footer.services.transfer">Трансфер</a>
+                        <a href="#" class="footer-link" data-i18n="footer.services.business">Деловые поездки</a>
+                        <a href="#" class="footer-link" data-i18n="footer.services.wedding">Свадебный кортеж</a>
+                        <a href="#" class="footer-link" data-i18n="footer.services.excursions">Экскурсии</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.sections.company">Компания</h4>
+                        <a href="#about" class="footer-link" data-i18n="footer.company.about">О нас</a>
+                        <a href="#contact" class="footer-link" data-i18n="footer.company.contact">Контакты</a>
+                        <a href="#" class="footer-link" data-i18n="footer.company.reviews">Отзывы</a>
+                        <a href="#" class="footer-link" data-i18n="footer.company.careers">Вакансии</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright" data-i18n="footer.copyright">© 2024 AlmaDrive. Все права защищены.</p>
+                <div class="legal-links">
+                    <a href="/privacy" class="legal-link" data-i18n="footer.legal.privacy">Политика конфиденциальности</a>
+                    <a href="/terms" class="legal-link" data-i18n="footer.legal.terms">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх" data-i18n-aria-label="common.back_to_top">
+        ↑
+    </button>
+
+    <!-- ✅ ОПТИМИЗАЦИЯ: Загрузка скриптов в правильном порядке -->
+    <!-- AOS локально -->
+
+    
+    <!-- Ваши скрипты -->
+    <script src="js/api.js"></script>
+    <!-- cache-bust to avoid stale JS in browsers -->
+    <script src="js/booking-form.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/services.js" defer></script>
+    <script src="js/mobile-menu.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/lang-switcher.js" defer></script>
+    <script src="js/service-reviews.js" defer></script>
+    <script src="js/video-hero.js" defer></script>
+    
+    <!-- ✅ Инициализация -->
+    <script>
+        // Critical JS - выполняется сразу
+        (function() {
+            'use strict';
+            
+            // Инициализация AOS (локальная версия)
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                    easing: 'ease-out-cubic'
+                });
+            }
+            
+            // Utility functions
+            window.scrollToBooking = function() {
+                const fleetSection = document.getElementById('booking');
+                if (fleetSection) {
+                    fleetSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            };
+            
+            window.openContactForm = function() {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            };
+            
+            // Back to top
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTop.classList.add('visible');
+                    } else {
+                        backToTop.classList.remove('visible');
+                    }
+                });
+                
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+            
+            // Video controls
+            const video = document.querySelector('.luxury-car-video');
+            const pauseBtn = document.querySelector('.pause-btn');
+            const muteBtn = document.querySelector('.mute-btn');
+            
+            if (pauseBtn && video) {
+                pauseBtn.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play();
+                        pauseBtn.querySelector('.play-icon').style.display = 'block';
+                        pauseBtn.querySelector('.pause-icon').style.display = 'none';
+                    } else {
+                        video.pause();
+                        pauseBtn.querySelector('.play-icon').style.display = 'none';
+                        pauseBtn.querySelector('.pause-icon').style.display = 'block';
+                    }
+                });
+            }
+            
+            if (muteBtn && video) {
+                muteBtn.addEventListener('click', () => {
+                    video.muted = !video.muted;
+                    muteBtn.classList.toggle('muted', video.muted);
+                });
+            }
+            
+            // Скрыть кнопку "Выбрать авто" в хедере на мобильных
+            function checkMobileButton() {
+                const desktopBookBtn = document.querySelector('.desktop-book-btn');
+                if (desktopBookBtn) {
+                    if (window.innerWidth <= 768) {
+                        desktopBookBtn.style.display = 'none';
+                    } else {
+                        desktopBookBtn.style.display = 'flex';
+                    }
+                }
+            }
+            
+            // Проверять при загрузке и изменении размера
+            window.addEventListener('load', checkMobileButton);
+            window.addEventListener('resize', checkMobileButton);
+            
+            // ✅ ДОБАВЛЕНО: Service Worker для PWA (опционально)
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('ServiceWorker зарегистрирован');
+                        })
+                        .catch(err => {
+                            console.log('ServiceWorker ошибка:', err);
+                        });
+                });
+            }
+            
+            // ✅ ДОБАВЛЕНО: Показать сообщение об ошибке API
+            setTimeout(() => {
+                const loadingElement = document.querySelector('.loading-cars');
+                if (loadingElement && loadingElement.parentElement.children.length === 1) {
+                    // Если через 10 секунд всё ещё показывается loading
+                    loadingElement.innerHTML = `<p>${window.t('common.slow_load','⚠️ Загрузка затянулась. Проверьте подключение к интернету.')}</p>`;
+                    const errorMessage = document.getElementById('apiErrorMessage');
+                    if (errorMessage) {
+                        errorMessage.style.display = 'block';
+                    }
+                }
+            }, 10000);
+        })();
+    </script>
+    
+    <!-- ✅ Аналитика (опционально) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-Y');
+    </script>
+    -->
+
+</body>
+</html> 
