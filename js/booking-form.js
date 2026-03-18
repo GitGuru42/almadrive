@@ -75,8 +75,8 @@ class BookingFormManager {
 
     const percent = Math.max(Number(result.price_multiplier || 100) - 100, 0);
     const classLine = percent > 0
-      ? `${result.vehicle_class_name} (+${percent}%)`
-      : `${result.vehicle_class_name} (базовый тариф)`;
+    ? `${result.vehicle_class_name} (+${percent}%)`
+    : `${result.vehicle_class_name}`;
 
     this.priceValueEl.textContent = this.formatMoney(result.estimated_price);
     this.priceMetaEl.textContent = `${result.service_name} • ${classLine} • от ${this.formatMoney(result.base_price)}`;
@@ -101,7 +101,7 @@ class BookingFormManager {
 
       this.vehicleClassSelect.innerHTML = '<option value="">Выберите класс автомобиля</option>' + this.vehicleClasses.map((v) => {
         const diff = Math.max(Number(v.price_multiplier || 100) - 100, 0);
-        const suffix = diff > 0 ? ` — +${diff}%` : ' — базовый тариф';
+        const suffix = diff > 0 ? ` — +${diff}%` : '';
         return `<option value="${v.id}">${this.escapeHtml(v.name)}${this.escapeHtml(suffix)}</option>`;
       }).join('');
 
